@@ -13,10 +13,16 @@ if(!empty($_GET['cmd'])) {
 	print "cmdreq: ".$_GET['cmd']."<br>";
 }
 
-$host = getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST");
-$username = getenv("DATABASE_USER");
-$password = getenv("DATABASE_PASSWORD");
-$DBName = "sampledb";
+//$host = getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST");
+//$username = getenv("DATABASE_USER");
+//$password = getenv("DATABASE_PASSWORD");
+//$DBName = "sampledb";
+
+
+$host = "bmppikx9mn79axgjlhh4-mysql.services.clever-cloud.com";
+$username = "uphyltwqsqsipjri";
+$password = "5V7FaMjFWryhGXYcagw2";
+$DBName = "bmppikx9mn79axgjlhh4";
 
 $conn = mysqli_connect($host,$username,$password) or die(mysql_error());
 $db = mysqli_select_db($conn,$DBName) or die(mysql_error());
